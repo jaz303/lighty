@@ -111,6 +111,10 @@ module Lighty
           hash.merge!("php" => php_config)
         end
         
+        opts.on("--directory-listing", "Enable directory listing") do |v|
+          has["directory_listing"] = v || true
+        end
+        
         opts.on("-d", "--dispatcher [DISPATCHER]", "Set the dispatcher") do |v|
           hash["dispatcher"] = v
         end
