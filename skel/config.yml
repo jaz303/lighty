@@ -1,0 +1,9 @@
+document_root: "."
+dispatcher: false
+directory_listing: false
+port: 3000
+lighty: "/opt/local/sbin/lighttpd"
+php:
+    enabled: false
+    versions:
+        5_2_8: "/opt/local/bin/php-cgi"
