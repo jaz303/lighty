@@ -112,7 +112,7 @@ module Lighty
         end
         
         opts.on("--directory-listing", "Enable directory listing") do |v|
-          has["directory_listing"] = v || true
+          hash["directory_listing"] = v || true
         end
         
         opts.on("-d", "--dispatcher [DISPATCHER]", "Set the dispatcher") do |v|
