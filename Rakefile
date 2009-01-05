@@ -11,5 +11,5 @@ end
 
 task :rebuild => :clean do
   `gem build lighty.gemspec`
-  `sudo gem install lighty-0.1.0.gem`
+  `sudo gem install lighty-0.1.1.gem`
 end
