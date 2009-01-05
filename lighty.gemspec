@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name = "lighty"
   s.date = "2009-01-05"
-  s.version = "0.1.0"
+  s.version = "0.1.1"
   s.author = "Jason Frame"
   s.email = "jason@onehackoranother.com"
   s.homepage = "http://github.com/jaz303/lighty/"
