@@ -9,35 +9,35 @@ Synopsis
 
 As a Rails user spoiled by the utility of `script/server`, I wince whenever I need to start a new PHP project - a process invariably requiring one of the following courses of action:
 
-  1. Create a new Apache vhost. An absolute pain in the bottom. Needs to be
-     repeated on every dev system.
-  2. Develop in `~/public_html`. Lame - now my app needs to support being run from
-     subdirectories and I can't check the project out into my normal working directory
-     hierarchy unless I also enable `FollowSymLinks`.
+ 1. Create a new Apache vhost. An absolute pain in the bottom. Needs to be
+    repeated on every dev system.
+ 2. Develop in `~/public_html`. Lame - now my app needs to support being run from
+    subdirectories and I can't check the project out into my normal working directory
+    hierarchy unless I also enable `FollowSymLinks`.
      
 And let's not forget about different PHP versions - you might want to test your app against the latest stable version, try out the new features in 5.3, or run a legacy app on 4.x. Have fun doing that with Apache.
 
 `lighty` was created to address these problems and supports:
   
-  * Spontaneous development - change to any directory, type `lighty` and
-    Bob's your Dad's brother.
-  * Concise command line options for configuring common use cases such as
-    setting the document root or routing all 404s to a single "dispatch" URL.
-  * Multiple PHP versions with indirect referencing - configure available
-    version numbers and binaries once on a system-wide basis and refer to
-    them thereafter by version number alone - great for teams or single
-    developers with multiple systems as your per-app configuration need not
-    contain the path to the PHP binary.
-  * Hierarchical configuration - options can be specified in global and local
-    config files, and via the command line, with each source being more
-    specific (and hence overriding) its predecessor.
+ * Spontaneous development - change to any directory, type `lighty` and
+   Bob's your Dad's brother.
+ * Concise command line options for configuring common use cases such as
+   setting the document root or routing all 404s to a single "dispatch" URL.
+ * Multiple PHP versions with indirect referencing - configure available
+   version numbers and binaries once on a system-wide basis and refer to
+   them thereafter by version number alone - great for teams or single
+   developers with multiple systems as your per-app configuration need not
+   contain the path to the PHP binary.
+ * Hierarchical configuration - options can be specified in global and local
+   config files, and via the command line, with each source being more
+   specific (and hence overriding) its predecessor.
   
 Requirements
 ------------
 
-  * lighttpd
-  * Ruby & rubygems
-  * FastCGI binaries for any versions of PHP you wish to run
+ * lighttpd
+ * Ruby & rubygems
+ * FastCGI binaries for any versions of PHP you wish to run
   
 Installation
 ------------
