@@ -21,6 +21,10 @@ php:
     # Is PHP enabled by default? If not, you need to pass --php to lighty
     enabled: false
     
+    # Explicity state default version to use
+    # By default, lighty will choose the best available version
+    #version: 5_2_8
+    
     # Specify the available versions of PHP here
     # Values should be paths to *FastCGI* binaries.
     versions:
