@@ -1,9 +1,27 @@
-document_root: "."
-dispatcher: false
-directory_listing: false
-port: 3000
+# lighty configuration file
+
+# Path to lighttpd binary - essential that this is correct
 lighty: "/opt/local/sbin/lighttpd"
+
+# Directory from which to serve. Will be prepended with CWD unless there is a leading slash.
+document_root: "."
+
+# Setting dispatcher will cause all 404s to be routed to that URL
+dispatcher: false
+
+# Are directory listings enabled by default? If not, you need to pass --directory-listing to lighty
+directory_listing: false
+
+# Port to listen on
+port: 3000
+
+# PHP configuration options
 php:
+    
+    # Is PHP enabled by default? If not, you need to pass --php to lighty
     enabled: false
+    
+    # Specify the available versions of PHP here
+    # Values should be paths to *FastCGI* binaries.
     versions:
         5_2_8: "/opt/local/bin/php-cgi"
