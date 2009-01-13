@@ -10,11 +10,15 @@ module Lighty
     end
     
     def php_binary_path
-      if requested_version = try('php.version')
-        php_version_binary_path(requested_version)
-      else
-        php_version_binary_path(best_php_version)
+      path = if requested_version = try('php.version')
+               php_version_binary_path(requested_version)
+             else
+               php_version_binary_path(best_php_version)
+             end
+      if path && (ini_options = try('php.ini')).is_a?(Hash)
+        path += ini_options.map { |k,v| " -d #{k}=#{v}" }.join('')
       end
+      path
     end
     
     def best_php_version

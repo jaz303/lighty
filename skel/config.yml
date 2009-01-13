@@ -29,3 +29,7 @@ php:
     # Values should be paths to *FastCGI* binaries.
     versions:
         5_2_8: "/opt/local/bin/php-cgi"
+
+    # Hash of php.ini directives to be passed to php-cgi via -d CLI option
+    #ini:
+        
