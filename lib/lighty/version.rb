@@ -1,6 +1,6 @@
 module Lighty
   module VERSION
-    MAJOR, MINOR, TINY = [0, 1, 5]
+    MAJOR, MINOR, TINY = [0, 1, 6]
     STRING = [MAJOR, MINOR, TINY] * '.'
   end
 end
