@@ -132,6 +132,8 @@ module Lighty
                         false
                       when Hash
                         sanitize_config(v)
+                      when String
+                        v.gsub(/\{\{CWD\}\}/, Dir.pwd)
                       else
                         v
                       end)
