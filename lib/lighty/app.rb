@@ -1,6 +1,15 @@
 module Lighty
   class App
     
+    CANDIDATE_LIGHTTPD_LOCATIONS = %w(
+      /opt/local/sbin/lighttpd
+      /opt/local/bin/lighttpd
+      /usr/local/sbin/lighttpd
+      /usr/local/bin/lighttpd
+      /usr/sbin/lighttpd
+      /usr/bin/lighttpd
+    )
+    
     def initialize(cwd)
       @cwd = cwd
     end
