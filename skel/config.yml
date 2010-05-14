@@ -3,7 +3,7 @@
 # you can use '{{CWD}}' in any string to subsitute the current working directory
 
 # Path to lighttpd binary - essential that this is correct
-lighty: "/opt/local/sbin/lighttpd"
+lighty: "$LIGHTTPD_PATH"
 
 # Directory from which to serve. Will be prepended with CWD unless there is a leading slash.
 document_root: "."

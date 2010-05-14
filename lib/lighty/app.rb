@@ -37,7 +37,14 @@ module Lighty
     def prepare_global_config
       unless File.exists?(config_dir)
         FileUtils.cp_r(File.join(File.dirname(__FILE__), '..', '..', 'skel'), config_dir)
+        yaml_path = File.join(config_dir, 'config.yml')
+        yaml = File.read(yaml_path).gsub('$LIGHTTPD_PATH', find_lighttpd)
+        File.open(yaml_path, 'w') { |f| f.write(yaml) }
       end
+    end
+    
+    def find_lighttpd
+      CANDIDATE_LIGHTTPD_LOCATIONS.detect { |f| File.exists?(f) && File.executable?(f) } || CANDIDATE_LIGHTTPD_LOCATIONS.first
     end
     
     def merge_global_config
